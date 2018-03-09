@@ -1,0 +1,4 @@
+---
+distcc_nets: "127.0.0.0/8"
+distcc_listen: "localhost"
+distcc_loglevel: warning

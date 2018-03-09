@@ -3,8 +3,8 @@
 # {{ ansible_managed }}
 # DistCC worker (server) config
 
-ALLOWEDNETS="{{ tinc_subnet }}.0/24"
-LISTENER="{{ vpn_ip }} --log-level=warning"
+ALLOWEDNETS="{{ distcc_nets }}"
+LISTENER="{{ distcc_listen }} --log-level={{ distcc_loglevel }}"
 NICE="5"
 ZEROCONF=""
 JOBS=""
