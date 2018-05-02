@@ -4,9 +4,7 @@
   tags:
     - package
   package:
-    name: "{{ item }}"
-  with_items:
-    - distcc-pump
+    name: distcc-pump
   notify: restart distcc
 
 - name: distcc | config
