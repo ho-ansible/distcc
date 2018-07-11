@@ -20,5 +20,5 @@
     - service
   service:
     name: distcc
-    state: started
-    enabled: yes
+    state: "{{ ternary(distcc_listen, 'started', 'stopped') }}"
+    enabled: "{{ ternary(distcc_listen, 'yes', 'no') }}"
