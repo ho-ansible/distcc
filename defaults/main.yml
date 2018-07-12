@@ -7,4 +7,4 @@ distcc_nice: 5
 # homedir for distcc_user
 distcc_home: /var/tmp/distcc
 # pubkey to allow login as distcc_user
-distcc_sshkey: ""
+distcc_sshkeys: ""

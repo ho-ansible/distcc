@@ -27,7 +27,7 @@
     - ssh
   authorized_key:
     user: "{{ distcc_user }}"
-    key: "{{ distcc_pubkey }}"
+    key: "{{ distcc_sshkeys }}"
     exclusive: yes
 
 - name: distcc | service
