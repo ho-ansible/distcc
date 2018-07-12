@@ -10,3 +10,5 @@ i.e., a worker that can be called from a remote compiler.
 + `distcc_loglevel` (default: warning): verbosity of distcc log
 + `distcc_nice` (default: 5): priority of compile processes,
   higher nice means lower priority
++ `distcc_home` (default: /var/tmp/distcc): homedir of the `distcc_user`
++ `distcc_pubkey`: SSH public key to allow login as `distcc_user`

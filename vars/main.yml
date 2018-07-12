@@ -1,0 +1,3 @@
+---
+# match distcc package
+distcc_user: distccd
