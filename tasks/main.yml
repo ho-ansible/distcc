@@ -21,6 +21,8 @@
   user:
     name: "{{ distcc_user }}"
     home: "{{ distcc_home }}"
+    shell: /bin/sh
+  when: not distcc_listen
 
 - name: distcc | SSH keys
   tags:
@@ -29,6 +31,7 @@
     user: "{{ distcc_user }}"
     key: "{{ distcc_sshkeys }}"
     exclusive: yes
+  when: not distcc_listen
 
 - name: distcc | service
   tags:
