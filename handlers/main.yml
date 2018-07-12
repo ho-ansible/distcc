@@ -4,4 +4,4 @@
     - service
   service:
     name: distcc
-    state: "{{ ternary(distcc_listen, 'restarted', 'stopped') }}"
+    state: "{{ distcc_listen | ternary('restarted', 'stopped') }}"

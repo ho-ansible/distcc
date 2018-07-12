@@ -3,7 +3,7 @@
 # {{ ansible_managed }}
 # DistCC worker (server) config
 
-STARTDISTCC={{ ternary(distcc_listen, "true", "false") }}
+STARTDISTCC={{ distcc_listen | ternary("true", "false") }}
 ALLOWEDNETS="{{ distcc_nets }}"
 LISTENER="{{ distcc_listen }} --log-level={{ distcc_loglevel }}"
 NICE="{{ distcc_nice }}"
