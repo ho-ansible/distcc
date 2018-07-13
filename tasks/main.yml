@@ -15,6 +15,24 @@
     dest: /etc/default/distcc
   notify: restart distcc
 
+- name: distcc | user
+  tags:
+    - user
+  user:
+    name: "{{ distcc_user }}"
+    home: "{{ distcc_home }}"
+    shell: /bin/sh
+  when: not distcc_listen
+
+- name: distcc | SSH keys
+  tags:
+    - ssh
+  authorized_key:
+    user: "{{ distcc_user }}"
+    key: "{{ distcc_sshkeys }}"
+    exclusive: yes
+  when: not distcc_listen
+
 - name: distcc | service
   tags:
     - service
