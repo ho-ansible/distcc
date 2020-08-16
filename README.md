@@ -2,6 +2,9 @@
 Ansible role to configure a distcc server;
 i.e., a worker that can be called from a remote compiler.
 
+## DEPRECATED
+This ansible role is no longer maintained.
+
 # Role variables
 + `distcc_listen` (default: localhost): IP to bind to in daemon mode.
   Set to empty string (`""`) to disable daemon and run in inetd mode.
