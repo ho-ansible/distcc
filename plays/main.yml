@@ -1,0 +1,10 @@
+#! /usr/bin/env ansible-playbook
+# Configure distcc distributed compiler
+# Replace 'distcc' with your own inventory group
+---
+- name: distcc | distributed compiler
+  hosts: distcc
+  roles:
+  - role: distcc
+    tags:
+    - distcc
