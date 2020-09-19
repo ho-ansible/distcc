@@ -1,7 +1,7 @@
 ---
 - name: restart distcc
   tags:
-    - service
+  - service
   service:
     name: distcc
     state: "{{ distcc_listen | ternary('restarted', 'stopped') }}"

@@ -2,14 +2,14 @@
 
 - name: distcc | packages
   tags:
-    - package
+  - package
   package:
     name: distcc-pump
   notify: restart distcc
 
 - name: distcc | config
   tags:
-    - config
+  - config
   template:
     src: distcc.j2
     dest: /etc/default/distcc
@@ -17,7 +17,7 @@
 
 - name: distcc | user
   tags:
-    - user
+  - user
   user:
     name: "{{ distcc_user }}"
     home: "{{ distcc_home }}"
@@ -26,7 +26,7 @@
 
 - name: distcc | SSH keys
   tags:
-    - ssh
+  - ssh
   authorized_key:
     user: "{{ distcc_user }}"
     key: "{{ distcc_sshkeys }}"
@@ -35,7 +35,7 @@
 
 - name: distcc | service
   tags:
-    - service
+  - service
   service:
     name: distcc
     state: "{{ distcc_listen | ternary('started', 'stopped') }}"
